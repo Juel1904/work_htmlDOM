@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <table border="1">
+        <tr>
+            <td colspan="2"><p id="result"></p></td>
+        </tr>
+        <tr>
+            <td><button id="add" onclick="addfunc()">Addition(+)</button></td>
+            <td>Number 1</td>
+        </tr>
+        <tr>
+            <td><button id="sub" onclick="subfunc()">Subtraction(-)</button></td>
+            <td><input type="number" id="number1" placeholder="number 1 here"></td>
+        </tr>
+        <tr>
+            <td><button id="mul" onclick="multfunc()">Multiplication(x)</button></td>
+            <td>Number 2</td>
+        </tr>
+        <tr>
+            <td><button id="div" onclick="divfunc()">Division(:)</button></td>
+            <td><input type="number" id="number2" placeholder="number 2 here"></td>
+        </tr>
+        <tr>
+            <td class="calbutton" align="center" colspan="2"><button onclick="calfunction()">Calculator</button></td>
+        </tr>
+    </table>
+    <script>
+        var resulfinal = 0;
+        var resultnum = 0;
+        function addfunc()
+        {
+            var color = document.getElementById("add");
+            color.style.color="red";
+            var numinput1 = document.getElementById("number1").value;
+            var numinput2 = document.getElementById("number2").value;
+            resultnum = parseInt(numinput1) + parseInt(numinput2);
+            resulfinal = resultnum;
+            
+        }
+        function subfunc()
+        {
+            var color = document.getElementById("sub");
+            color.style.color="red";
+            var numinput1 = document.getElementById("number1").value;
+            var numinput2 = document.getElementById("number2").value;
+            var resultnum = parseInt(numinput1) - parseInt(numinput2);
+            resulfinal = resultnum;
+        }
+        function multfunc()
+        {
+            var color = document.getElementById("mul");
+            color.style.color="red";
+            var numinput1 = document.getElementById("number1").value;
+            var numinput2 = document.getElementById("number2").value;
+            var resultnum = parseInt(numinput1) * parseInt(numinput2);
+            resulfinal = resultnum;
+        }
+        function divfunc()
+        {
+            var color = document.getElementById("div");
+            color.style.color="red";
+            var numinput1 = document.getElementById("number1").value;
+            var numinput2 = document.getElementById("number2").value;var resultnum = parseInt(numinput1) / parseInt(numinput2);
+            resulfinal = resultnum;
+        }
+        function calfunction()
+        {
+            document.getElementById("result").innerHTML = "Result is " + resulfinal;
+        }
+        
+    </script>
+</body>
+</html>
