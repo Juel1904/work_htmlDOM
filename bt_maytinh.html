@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <input type="number" id="number1" placeholder="number 1 here">
+    <input type="number" id="number2" placeholder="number 2 here">
+    <br>
+    <br>
+    <button onclick="addfunc()">Addition(+)</button>
+    <button onclick="subfunc()">Subtraction(-)</button>
+    <button onclick="multfunc()">Multiplication(x)</button>
+    <button onclick="divfunc()">Division(:)</button>
+    <br>
+    <p id="result"></p>
+    
+    <script>
+        function addfunc()
+        {
+            var numinput1 = document.getElementById("number1").value;
+            var numinput2 = document.getElementById("number2").value;
+            var addresult = parseInt(numinput1) + parseInt(numinput2);
+            // alert("Result is: " + addresult);
+            document.getElementById("result").innerHTML = "Result Addition is: " + addresult;
+        }
+        function subfunc()
+        {
+            var numinput1 = document.getElementById("number1").value;
+            var numinput2 = document.getElementById("number2").value;
+            var subresult = parseInt(numinput1) - parseInt(numinput2);
+            // alert("Result is: " + addresult);
+            document.getElementById("result").innerHTML = "Result Subtraction is: " + subresult;
+        }
+        function multfunc()
+        {
+            var numinput1 = document.getElementById("number1").value;
+            var numinput2 = document.getElementById("number2").value;
+            var multresult = parseInt(numinput1) * parseInt(numinput2);
+            // alert("Result is: " + addresult);
+            document.getElementById("result").innerHTML = "Result Multiplication is: " + multresult;
+        }
+        function divfunc()
+        {
+            var numinput1 = document.getElementById("number1").value;
+            var numinput2 = document.getElementById("number2").value;
+            var divresult = parseInt(numinput1) / parseInt(numinput2);
+            // alert("Result is: " + addresult);
+            document.getElementById("result").innerHTML = "Result Division is: " + divresult;
+        }
+    </script>
+</body>
+</html>
